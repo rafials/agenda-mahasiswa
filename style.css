@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Times New Roman;
   margin: 20px;
   background: #030303;
 }
@@ -26,3 +26,4 @@ button {
   border: none;
   border-radius: 5px;
 }
+
