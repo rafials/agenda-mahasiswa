@@ -2,37 +2,143 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Agenda Digital Mahasiswa</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Kuliah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #333;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <h1>📅 Agenda Digital Mahasiswa</h1>
+  <h1>Jadwal Kuliah</h1>
 
-  <section id="form-jadwal">
-    <h2>Tambah Jadwal Kuliah</h2>
-    <input type="text" id="matkul" placeholder="Nama Mata Kuliah">
-    <input type="text" id="hari" placeholder="Hari (Senin, Selasa...)">
-    <input type="text" id="jam" placeholder="Jam (08:00)">
-    <input type="text" id="ruangan" placeholder="Ruangan">
-    <input type="text" id="dosen" placeholder="Dosen Pengampu">
-    <button onclick="tambahJadwal()">Tambah</button>
-  </section>
-
-  <section id="form-tugas">
-    <h2>Tambah Tugas</h2>
-    <input type="text" id="tugas" placeholder="Nama Tugas">
-    <input type="date" id="deadline">
-    <button onclick="tambahTugas()">Tambah</button>
-  </section>
-
-  <section id="dashboard">
-    <h2>Dashboard Hari Ini</h2>
-    <div id="jadwal-hari-ini"></div>
-    <div id="tugas-belum"></div>
-    <div id="total-sks"></div>
-    <div id="alert"></div>
-  </section>
-
-  <script src="script.js"></script>
+  <table>
+    <thead>
+      <tr>
+        <th>Hari</th>
+        <th>Jam</th>
+        <th>Mata Kuliah</th>
+        <th>Dosen</th>
+        <th>Ruangan</th>
+        <th>SKS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Senin</td>
+        <td>08:45 - 10:25</td>
+        <td>Algoritma dan Struktur Data</td>
+        <td>Putra Pandu Adikara, S.Kom., M.Kom.</td>
+        <td>Gedung F FILKOM - F4.10</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Senin</td>
+        <td>10:30 - 12:10</td>
+        <td>Pemrograman SQL</td>
+        <td>Ir. Agus Wahyu Widodo, S.T., M.Cs.</td>
+        <td>Gedung F FILKOM - F3.6</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Senin</td>
+        <td>12:30 - 15:00</td>
+        <td>Pengembangan Aplikasi Web</td>
+        <td>Rizal Setya Perdana, S.Kom., M.Kom., Ph.D.</td>
+        <td>Gedung F FILKOM - F3.6</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Selasa</td>
+        <td>08:45 - 10:25</td>
+        <td>Jaringan Komputer</td>
+        <td>Reza Andria Siregar, S.T., M.Kom.</td>
+        <td>Lab Pembelajaran Gedung G - G1.6</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Selasa</td>
+        <td>12:30 - 14:10</td>
+        <td>Algoritma dan Struktur Data</td>
+        <td>Putra Pandu Adikara, S.Kom., M.Kom.</td>
+        <td>Lab Pembelajaran Gedung G - G1.6</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Kamis</td>
+        <td>10:30 - 12:10</td>
+        <td>Dasar Pengembangan Sistem Informasi</td>
+        <td>Ir. Issa Arwani, S.Kom., M.Sc.</td>
+        <td>Gedung F FILKOM - F3.13</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Kamis</td>
+        <td>12:30 - 15:00</td>
+        <td>Jaringan Komputer</td>
+        <td>Reza Andria Siregar, S.T., M.Kom.</td>
+        <td>Gedung F FILKOM - F4.4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Kamis</td>
+        <td>16:00 - 17:40</td>
+        <td>Pemrograman SQL</td>
+        <td>Ir. Agus Wahyu Widodo, S.T., M.Cs.</td>
+        <td>Lab Pembelajaran Gedung G - G1.6</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Jumat</td>
+        <td>08:45 - 11:15</td>
+        <td>Data Sains</td>
+        <td>Dr. Ir. Dian Eka Ratnawati, S.Si., M.Kom.</td>
+        <td>Gedung F FILKOM - F4.2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Jumat</td>
+        <td>14:15 - 15:55</td>
+        <td>Pengembangan Aplikasi Web</td>
+        <td>Rizal Setya Perdana, S.Kom., M.Kom., Ph.D.</td>
+        <td>Lab Pembelajaran Gedung G - G1.2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Jumat</td>
+        <td>16:00 - 17:40</td>
+        <td>Dasar Pengembangan Sistem Informasi</td>
+        <td>Ir. Issa Arwani, S.Kom., M.Sc.</td>
+        <td>Lab Pembelajaran Gedung G - G1.6</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
