@@ -79,8 +79,7 @@ input:focus {
 #tugas-belum,
 #total-sks,
 #alert {
-  opacity: 1 !important;
-  filter: none !important;
   color: #ffffff !important;
-  text-shadow: 0 0 6px #7a00ff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.6);
+  font-weight: 600;
 }
