@@ -8,6 +8,12 @@
 <body>
   <h1>📅 Agenda Digital Mahasiswa</h1>
 
+  <!-- Tombol untuk buka jadwal tetap -->
+  <button onclick="openModal()" style="margin: 10px; padding: 10px 15px; background:#2563eb; color:white; border:none; border-radius:6px; cursor:pointer;">
+    📅 Tampilkan Jadwal Kuliah
+  </button>
+
+  <!-- Form tambah jadwal -->
   <section id="form-jadwal">
     <h2>Tambah Jadwal Kuliah</h2>
     <input type="text" id="matkul" placeholder="Nama Mata Kuliah">
@@ -18,6 +24,7 @@
     <button onclick="tambahJadwal()">Tambah</button>
   </section>
 
+  <!-- Form tambah tugas -->
   <section id="form-tugas">
     <h2>Tambah Tugas</h2>
     <input type="text" id="tugas" placeholder="Nama Tugas">
@@ -25,6 +32,7 @@
     <button onclick="tambahTugas()">Tambah</button>
   </section>
 
+  <!-- Dashboard -->
   <section id="dashboard">
     <h2>Dashboard Hari Ini</h2>
     <div id="jadwal-hari-ini"></div>
@@ -33,6 +41,51 @@
     <div id="alert"></div>
   </section>
 
+  <!-- Modal Jadwal Tetap -->
+  <div id="jadwalModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+    <div style="background:white; padding:20px; border-radius:10px; width:90%; max-width:600px; max-height:90vh; overflow-y:auto;">
+      <span onclick="closeModal()" style="float:right; cursor:pointer; font-size:20px;">&times;</span>
+      <h2>Jadwal Kuliah</h2>
+
+      <h3>Senin</h3>
+      <ul>
+        <li>(C) Algoritma dan Struktur Data — 08:45 - 10:25 — Gedung F FILKOM F4.10</li>
+        <li>(D) Pemrograman SQL — 10:30 - 12:10 — Gedung F FILKOM F3.6</li>
+        <li>(A) Pengembangan Aplikasi Web — 12:30 - 15:00 — Gedung F FILKOM F3.6</li>
+      </ul>
+
+      <h3>Selasa</h3>
+      <ul>
+        <li>(B) Jaringan Komputer — 08:45 - 10:25 — Lab G1.6</li>
+        <li>(C) Algoritma dan Struktur Data — 12:30 - 14:10 — Lab G1.6</li>
+      </ul>
+
+      <h3>Kamis</h3>
+      <ul>
+        <li>(C) Dasar Pengembangan Sistem Informasi — 10:30 - 12:10 — Gedung F3.13</li>
+        <li>(B) Jaringan Komputer — 12:30 - 15:00 — Gedung F4.4</li>
+        <li>(D) Pemrograman SQL — 16:00 - 17:40 — Lab G1.6</li>
+      </ul>
+
+      <h3>Jumat</h3>
+      <ul>
+        <li>(B) Data Sains — 08:45 - 11:15 — Gedung F4.2</li>
+        <li>(A) Pengembangan Aplikasi Web — 14:15 - 15:55 — Lab G1.2</li>
+        <li>(C) Dasar Pengembangan Sistem Informasi — 16:00 - 17:40 — Lab G1.6</li>
+      </ul>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+
+  <!-- Script modal -->
+  <script>
+    function openModal() {
+      document.getElementById("jadwalModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("jadwalModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
