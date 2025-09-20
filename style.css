@@ -89,7 +89,8 @@ input:focus {
   color: #b388ff;
   text-shadow: 0 0 10px #7c4dff, 0 0 20px #b388ff, 0 0 40px #7c4dff;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: left;   /* sebelumnya center -> sekarang left */
+  margin-left: 10px;  /* kasih jarak biar ga mepet */
 }
 
 #jadwal-hari-ini,
@@ -105,3 +106,4 @@ input:focus {
   box-shadow: 0 0 15px rgba(124, 77, 255, 0.6);
   text-shadow: 0 0 6px #7c4dff, 0 0 12px #b388ff;
 }
+
