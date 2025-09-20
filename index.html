@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda Digital Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📅 Agenda Digital Mahasiswa</h1>
+
+  <section id="form-jadwal">
+    <h2>Tambah Jadwal Kuliah</h2>
+    <input type="text" id="matkul" placeholder="Nama Mata Kuliah">
+    <input type="text" id="hari" placeholder="Hari (Senin, Selasa...)">
+    <input type="text" id="jam" placeholder="Jam (08:00)">
+    <input type="text" id="ruangan" placeholder="Ruangan">
+    <input type="text" id="dosen" placeholder="Dosen Pengampu">
+    <button onclick="tambahJadwal()">Tambah</button>
+  </section>
+
+  <section id="form-tugas">
+    <h2>Tambah Tugas</h2>
+    <input type="text" id="tugas" placeholder="Nama Tugas">
+    <input type="date" id="deadline">
+    <button onclick="tambahTugas()">Tambah</button>
+  </section>
+
+  <section id="dashboard">
+    <h2>Dashboard Hari Ini</h2>
+    <div id="jadwal-hari-ini"></div>
+    <div id="tugas-belum"></div>
+    <div id="total-sks"></div>
+    <div id="alert"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
